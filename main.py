@@ -12,7 +12,7 @@ client = OpenAI(
 completion = client.chat.completions.create(
     extra_body={},
     model="deepseek/deepseek-r1-0528:free",
-    messages=[{"role": "user", "content": "Tell us about AI agents in 1-2 sentences."}],
+    messages=[{"role": "user", "content": "Tell us about AI agents in 1 sentence."}],
     # max_tokens=1000,
 )
 

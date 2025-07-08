@@ -68,6 +68,9 @@ uv remove package-name
 # List installed packages
 uv pip list
 
+# Check Python version in uv environment
+uv run python --version
+
 # Run script with uv
 uv run script.py
 
