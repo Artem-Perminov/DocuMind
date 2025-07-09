@@ -17,7 +17,7 @@ llm = ChatOpenAI(
 messages = [
     (
         "system",
-        "You are an expert in {domain}. Your task is answer the question as short as possible",
+        "Ты эксперт в области {domain}. Твоя задача отвечать на вопросы пользователя как можно короче",
     ),
     MessagesPlaceholder("history"),
 ]
@@ -39,20 +39,22 @@ def display_chat_history(history):
     print("=" * 50 + "\n")
 
 
-domain = input("Choice domain area: ")
+domain = input("Выбери интересующую тебя область: ")
 history = []
 while True:
     print()
-    user_content = input("You: ")
+    user_content = input("Пользователь: ")
     history.append(HumanMessage(content=user_content))
     prompt_value = prompt_template.invoke({"domain": domain, "history": history})
     full_ai_content = ""
-    print("Bot: ", end="")
+    print("Умный кот: ", end="")
     for ai_message_chunk in llm.stream(prompt_value.to_messages()):
         print(ai_message_chunk.content, end="")
         full_ai_content += ai_message_chunk.content
     history.append(AIMessage(content=full_ai_content))
     print()
 
-    # Display the entire chat history after each bot response
-    display_chat_history(history)
+    # Ask if user wants to see chat history
+    show_history = input("Показать историю чата? (да / нет): ").lower()
+    if show_history == "yes":
+        display_chat_history(history)

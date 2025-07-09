@@ -1,5 +1,7 @@
 # docu_mind
 
+A collection of AI agents and tools built with Python. Each agent is organized in its own subdirectory under `/projects/`, making it easy to explore and run different AI implementations.
+
 A Python project using the blazing-fast [uv package manager](https://docs.astral.sh/uv/) for dependency management.
 
 ## Setup
@@ -76,6 +78,15 @@ uv run script.py
 
 # Update dependencies
 uv sync
+```
+
+## Running AI Agents
+
+To run any agent from the project root:
+
+```bash
+# Example: Run the simple chatbot
+uv run python projects/simple-bot/code.py
 ```
 
 ## Why uv?
