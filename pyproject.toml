@@ -5,4 +5,7 @@ requires-python = ">=3.13"
 dependencies = [
     "openai>=1.93.2",
     "python-dotenv>=1.1.1",
+    "langchain-openai>=0.3.7",
+    "langchain-core>=0.3.20",
+    "pydantic>=2.0.0",
 ]
