@@ -56,5 +56,5 @@ while True:
 
     # Ask if user wants to see chat history
     show_history = input("Показать историю чата? (да / нет): ").lower()
-    if show_history == "yes":
+    if show_history == "да":
         display_chat_history(history)
