@@ -32,9 +32,9 @@ def display_chat_history(history):
 
     for i, message in enumerate(history, 1):
         if isinstance(message, HumanMessage):
-            print(f"[{i}] User: {message.content}")
+            print(f"[{i}] Пользователь: {message.content}")
         elif isinstance(message, AIMessage):
-            print(f"[{i}] Bot: {message.content}")
+            print(f"[{i}] Умный кот: {message.content}")
 
     print("=" * 50 + "\n")
 
