@@ -11,8 +11,12 @@ from langchain_openai import ChatOpenAI
 from pydantic import BaseModel, Field
 from langgraph.graph.message import add_messages
 from langgraph.graph import StateGraph, START, END
+from langchain.globals import set_debug
 
 load_dotenv()
+
+# Enable global debugging
+# set_debug(True)
 
 
 # --------------------------------- State ---------------------------------------
