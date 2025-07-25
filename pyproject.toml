@@ -15,4 +15,5 @@ dependencies = [
     "rank-bm25>=0.2.2",
     "langchain-huggingface>=0.3.0",
     "sentence-transformers>=5.0.0",
+    "pypdf>=5.8.0",
 ]
