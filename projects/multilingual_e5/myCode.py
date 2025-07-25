@@ -17,7 +17,9 @@ irrelevant_doc = Document(
 )
 
 
-embeddings = HuggingFaceEmbeddings(model_name="intfloat/multilingual-e5-base")
+embeddings = HuggingFaceEmbeddings(
+    model_name="intfloat/multilingual-e5-base"
+)  # or intfloat/multilingual-e5-large-instruct
 
 document_vectors = embeddings.embed_documents(
     [relevant_doc.page_content, irrelevant_doc.page_content]
