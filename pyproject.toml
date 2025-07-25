@@ -12,4 +12,5 @@ dependencies = [
     "langchain-community>=0.3.27",
     "wikipedia>=1.4.0",
     "langgraph>=0.5.3",
+    "rank-bm25>=0.2.2",
 ]
